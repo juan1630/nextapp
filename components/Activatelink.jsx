@@ -8,6 +8,7 @@ const style = {
 
 export const Activatelink = ({ text, href }) => {
 
+    console.log( text, href )
     const { asPath } = useRouter();
 
     return(

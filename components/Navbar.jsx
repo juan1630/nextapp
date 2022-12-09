@@ -1,9 +1,35 @@
 import { Activatelink } from "./Activatelink";
 
+// import { menuItems } from '../db/nav'
+
+ const menuItems = [
+    {
+        text: 'Home',
+        href: '/'
+    },
+    {
+        text: 'About',
+        href: '/about'
+    },
+    {
+        text: 'Contact',
+        href: '/contact'
+    },
+    {
+        text: 'Pricing',
+        href: '/pricing'
+    },
+];
+
 export const Navbar = () => {
+
+    console.log( menuItems, 'arr' );
     return(<nav>
-        <Activatelink  text='Home' href="/" /> 
-        <Activatelink  text='About' href="/about" />  
-        <Activatelink  text='Contact' href="/contact" />
+
+        {
+            menuItems.map( ({text, href}) => {
+               return  <Activatelink  key={ href }  text={ text }  href={href }  /> 
+            })
+        }
     </nav>);
 }   

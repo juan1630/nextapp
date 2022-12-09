@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { DarkLayout } from '../components/layouts/DarkLayout'
 import { Mainlayout } from '../components/layouts/Mainlayout'
 import styles from '../components/layouts/Mainlayout.module.css'
 
@@ -8,7 +9,8 @@ export default function AboutPage() {
 
   //? Todos los componentes deben de iniciar con la primera letra capitalizada y usa el export por default  
   return (
-    <Mainlayout>
+    <>
+
       <main className={styles.main}>
         <h1> About page </h1>
         <h1 className={styles.title}>
@@ -22,7 +24,17 @@ export default function AboutPage() {
         </p>
 
       </main>
+    </>
+  )
+}
 
+
+AboutPage.getLayout = function getLayout (page) {
+  return(
+    <Mainlayout>
+    <DarkLayout>
+        { page}
+    </DarkLayout>
     </Mainlayout>
   )
 }
