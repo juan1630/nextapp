@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import { Navbar } from '../NavBar'
+import { FC, PropsWithChildren } from 'react'
+import { Navbar } from '../Navbar'
 import styles from './Mainlayout.module.css'
 
-export const Mainlayout = ({ children }) => {
+export const Mainlayout: FC<PropsWithChildren> = ({ children }) => {
     return (
         <div className={styles.container}>
           <Head>

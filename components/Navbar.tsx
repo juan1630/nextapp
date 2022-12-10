@@ -22,8 +22,6 @@ import { Activatelink } from "./Activatelink";
 ];
 
 export const Navbar = () => {
-
-    console.log( menuItems, 'arr' );
     return(<nav>
 
         {

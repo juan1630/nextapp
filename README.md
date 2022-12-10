@@ -39,3 +39,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Basic concepts
 - All the pages must begin with uppecase letter 
 - In the pages folder only create a pages that we will use in the UI
+
+# To delpoy the project in aout own computure 
+- We have to use   
+``` 
+yarn build 
+```
+after that use 
+```
+yarn satrt
+```
